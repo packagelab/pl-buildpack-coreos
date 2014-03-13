@@ -31,5 +31,5 @@ ccache -z 2>&1 | indent
 
 echo "-----> Building image"
 cd $build_dir/src/scripts >/dev/null 2>&1
-./build_image prod 2>&1 | indent
+./build_image --board amd64-generic prod 2>&1 | indent
 cd - >/dev/null 2>&1
