@@ -30,4 +30,6 @@ ccache -M $ccache_max_size 2>&1 | indent
 ccache -z 2>&1 | indent
 
 echo "-----> Building image"
-$build_dir/src/scripts/build_image prod 2>&1 | indent
+cd $build_dir/src/scripts >/dev/null 2>&1
+./build_image prod 2>&1 | indent
+cd - >/dev/null 2>&1
